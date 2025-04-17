@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake News Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen flex items-center justify-center p-6"
+  >
+    <div
+      class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg w-full max-w-3xl p-8 space-y-6"
+    >
+      <h1 class="text-3xl font-bold text-center text-indigo-700">
+        Fake News Detector
+      </h1>
+      <p class="text-center text-gray-600 mb-6">
+        Result After Analyzing the news
+      </p>
+
+      <!-- Title -->
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700 mb-1"
+          >Title</label
+        >
+        <input
+          type="text"
+          id="title"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          value="{{title}}"
+        />
+      </div>
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700 mb-1"
+          >Source</label
+        >
+        <input
+          type="text"
+          id="source"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          value="{{source}}"
+        />
+      </div>
+
+      <!-- Content -->
+      <div>
+        <label
+          for="content"
+          class="block text-sm font-medium text-gray-700 mb-1"
+          >Content</label
+        >
+        <textarea
+          id="content"
+          rows="5"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          placeholder="Paste news content here..."
+        >
+{{text}}</textarea
+        >
+      </div>
+
+      <!-- Author -->
+      <div>
+        <label for="author" class="block text-sm font-medium text-gray-700 mb-1"
+          >Result</label
+        >
+        <input
+          type="text"
+          id="author"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        />
+      </div>
+
+      <!-- Published Date -->
+      <div>
+        <label for="date" class="block text-sm font-medium text-gray-700 mb-1"
+          >Credibility Score</label
+        >
+        <input
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center pt-4">
+        <button
+          class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-6 py-2 rounded-lg shadow transition"
+        >
+          Detect News
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
